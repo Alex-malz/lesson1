@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald|Roboto:400,700");
+html {
+	height: 100%;
+}
+body {
+  font-size: 14px;
+  height: 100%;
+  line-height: 1.4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: .5em;
+}
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: .5em;
+}
+h3 {
+  font-size: 1rem;
+  margin-bottom: .5em;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: .8rem;
+}
+
+.content-left {
+  max-width:19%;
+  width: 100%;
+  float: left;
+  min-height: 100%;
+  background-color: aliceblue;
+  box-shadow: 0px 0px 0px 0px #979595 inset, 2px -6px 4px -4px;
+}
+.content-c{
+  max-width: 27%;
+  width: 100%;
+  float: left;
+  
+  margin: 20px 55px auto;    
+  box-shadow: 0px 0px 0px 0px #979595 inset, 2px 0px 4px -4px;
+}
+.indent{
+  margin: 20px 37px 0px 0px; 
+}
+.ind{
+  margin: 20px 20px 20px 20px; 
+}
+.indent p{
+  padding-bottom: 17px; 
+}
+.content-right {
+  max-width:25%;
+  width: 100%;
+  margin: 20px 120px auto;
+  float: left;
+}
+
+.timeline-item-left {
+  padding: 2em 2em 1em;
+  position: relative;
+  color: rgba(0, 0, 0, 0.7);
+  border-right: 2px solid rgba(0, 0, 0, 0.3);
+}
+.timeline-item-left p {
+  font-size: 1rem;
+}
+.timeline-item-left::before {
+  content: attr(date-is);
+  position: absolute;
+  right: -7em;
+  font-weight: bold;
+  top: 1.1em;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: .785rem;
+}
+.timeline-item-left::after {
+  width: 10px;
+  height: 10px;
+  display: block;
+  top: 1em;
+  position: absolute;
+  right: -11px;
+  border-radius: 10px;
+  content: '';
+  border: 5px solid rgba(255, 108, 0, 0.73);
+  background: white;
+}
+.timeline-item-left:last-child {
+  -o-border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
+     border-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
+     border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
+}
+.timeline-item-right {
+  padding: 2em 2em 1em;
+  position: relative;
+  color: rgba(0, 0, 0, 0.7);
+  border-left: 2px solid rgba(0, 0, 0, 0.3);
+}
+body p {
+  font-size: 1rem;
+}
+.timeline-item-right::before {
+  content: attr(date-is);
+  position: absolute;
+  left: -7em;
+  font-weight: bold;
+  top: 1.1em;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: .785rem;
+}
+.timeline-item-right::after {
+  width: 10px;
+  height: 10px;
+  display: block;
+  top: 1em;
+  position: absolute;
+  left: -11px;
+  border-radius: 10px;
+  content: '';
+  border: 5px solid rgba(255, 108, 0, 0.73);
+  background: white;
+}
+.timeline-item-right:last-child {
+  -o-border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
+     border-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
+     border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
+}
+.container {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-height: 80px;
+}
+
+ul.submenu {
+  background-color: #212121;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 4px 10px;
+  margin: 0;
+  overflow: hidden;
+}
+ul.submenu li {
+  display: inline-block;
+}
+ul.submenu li a i.fa {
+  padding: 10px;
+  display: inline-block;
+  border: 1px solid transparent;
+  color: #ccc;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  margin: 10px;
+  text-align: center;
+  line-height: 30px;
+  position: relative;
+  z-index: 2;
+}
+ul.submenu li a i.fa::after {
+  content: "";
+  height: 0%;
+  width: 0%;
+  position: absolute;
+  top: -500%;
+  bottom: -500%;
+  left: -500%;
+  right: -500%;
+  margin: auto;
+  border: 0px solid transparent;
+  border-radius: 200px;
+  opacity: 0;
+  z-index: -1;
+  transition: all ease 0.5s;
+}
+ul.submenu li a:hover i.fa::before {
+  color: #fff;
+}
+ul.submenu li a:hover i.fa-facebook::after {
+  height: 200%;
+  width: 200%;
+  background-color: #3b5998;
+  border-radius: 0px;
+  opacity: 1;
+}
+ul.submenu li a:hover i.fa-twitter::after {
+  height: 200%;
+  width: 200%;
+  background-color: #1dcaff;
+  border-radius: 0px;
+  opacity: 1;
+}
+ul.submenu li a:hover i.fa-google-plus::after {
+  height: 200%;
+  width: 200%;
+  background-color: #d34836;
+  border-radius: 0px;
+  opacity: 1;
+}
+ul.submenu li a:hover i.fa-instagram::after {
+  height: 200%;
+  width: 200%;
+  background-color: #8a3ab9;
+  border-radius: 0px;
+  opacity: 1;
+}
+
+i.fa-youtube {
+  font-size: 50px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background-color: #e62117;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+}
+
